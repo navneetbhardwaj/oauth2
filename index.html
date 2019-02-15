@@ -150,7 +150,7 @@
                 <p class="fragment">A code is issued and used to obtain the access_token. This code is released to a front-end application (on the browser) after the user logs in. The access_token instead, is issued Server side, authenticating the client with its password and the obtained code.</p>
             </section>
             <section>
-                <img class="fragment" height="500" src="img/auth_code_flow.png" alt="Authorisation code flow">
+                    <a href="./img/auth_code_flow.png" target="_blank"><img class="fragment" height="500" src="img/auth_code_flow.png" alt="Authorisation code flow"></a>
             </section>
             <section>
                 <h3>Step 1: Authorization Code Link</h3>
@@ -192,7 +192,10 @@ code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL</code>
         <section>
             <section>
                 <h3>Implicit grant</h3>
-                <p class="fragment">Useful in browser-based and mobile apps</p>
+                <p class="fragment">This flow is very similar to the Authentication Code one, but the access_token is immediately returned to the client after the user login, in an implicit way. You use this flow in Single Page Applications and pure Javascript applications, where is not possible to keep the client_secret secret. 
+                    Useful in browser-based and mobile apps</p>
+                </section>
+            <section>                    
                 <img class="fragment" src="img/implicit_flow.png" height="500" alt="Implicit grant flow">
             </section>
             <section>
@@ -216,6 +219,7 @@ code=AUTHORIZATION_CODE&redirect_uri=CALLBACK_URL</code>
         <section>
             <section>
                 <h3>Password grant</h3>
+                <p class="fragment">The main concept, in my opinion, of this flow, is the users enter their username and password in the client application and not in the Authorization Server. A noticeable thing is the credentials “belong” to the Authorization Server, not to the client,</p>
                 <p class="fragment">Useful for your website or your mobile app</p>
                 <ul class="fragment">
                     <li>Client sends username and password</li>
@@ -246,6 +250,7 @@ username=USERNAME&password=PASSWORD&client_id=CLIENT_ID</code>
         <section>
             <section>
                 <h3>Client credentials grant</h3>
+                <p class="fragment">The main difference between the flows mentioned above is that in this one there is no user interaction. The application executes the authentication request directly.</p>
                 <p class="fragment">Useful if applications can access resources on their own</p>
                 <ul class="fragment">
                     <li>Client sends client id and client secret</li>
@@ -273,7 +278,10 @@ username=USERNAME&password=PASSWORD&client_id=CLIENT_ID</code>
                 </pre>
             </section>
         </section>
-
+        <section>
+                <h3>Which flow should I choose?</h3>
+                <img class="fragment" src="img/flow_used.png" height="500" alt="Which flow used?">
+        </section>
         <section>
             <section>
                 <h3>Refresh token grant</h3>
