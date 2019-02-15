@@ -129,20 +129,27 @@
             <p>Path on authorization server which is used by the client to obtain an access token.</p>
         </section>
         <section>
-            <h3>Authorization grant</h3>
-            <p>A well defined set of steps to obtain access token from an authorization server</p>
-            <ul>
-                <li class="fragment">Authorisation code grant</li>
-                <li class="fragment">Implicit grant</li>
-                <li class="fragment">Password Grant</li>
-                <li class="fragment">Client credentials grant</li>
-                <li class="fragment">Refresh token grant</li>
-            </ul>
+            <section>
+                <h3>Authorization grant</h3>
+                <p>A well defined set of steps to obtain access token from an authorization server</p>
+                <ul>
+                    <li class="fragment">Authorisation code grant</li>
+                    <li class="fragment">Implicit grant</li>
+                    <li class="fragment">Client credentials grant</li>
+                    <li class="fragment">Password Grant</li>
+                    <!-- <li class="fragment">Refresh token grant</li> -->
+                </ul>
+            </section>
+            <section>
+                    <img src="img/cheatChart.png" alt="OAuth2 Cheat Sheet">
+            </section>
         </section>
         <section>
             <section>
                 <h3>Authorisation code grant</h3>
-                <p class="fragment">Useful in traditional web apps</p>
+                <p class="fragment">A code is issued and used to obtain the access_token. This code is released to a front-end application (on the browser) after the user logs in. The access_token instead, is issued Server side, authenticating the client with its password and the obtained code.</p>
+            </section>
+            <section>
                 <img class="fragment" height="500" src="img/auth_code_flow.png" alt="Authorisation code flow">
             </section>
             <section>
@@ -424,7 +431,8 @@ https://api.example.com/me
         keyboard: {
             39: 'next',
             37: 'prev'
-        }
+        },
+        mouseWheel: true,
     });
 </script>
 
